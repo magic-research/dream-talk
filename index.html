@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DREAM-Talk: Diffusion-based Realistic Emotional Audio-driven Method for Single Image Talking Face Generation</title>
+
+  <script type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+      </div>
+      <div class="container has-text-centered">
+        <!-- <h1 class="title is-3 publication-title">
+          
+        </h1> -->
+        <h3 class="title is-3 publication-title">
+          DREAM-Talk: <span style="color: red;">D</span>iffusion-based <span style="color: red;">R</span>ealistic <span style="color: red;">E</span>motional <span style="color: red;">A</span>udio-driven <span style="color: red;">M</span>ethod for
+        </h3>
+        <h3 class="title is-3 publication-title">
+          Single Image <span style="color: red;">Talk</span>ing Face Generation
+        </h3>
+        <div class="is-size-5 publication-authors">
+          <div class="author-block"><a href="https://zhangchenxu528.github.io/">Chenxu Zhang</a><sup>1*</sup>, </div>
+          <div class="author-block"><a href="https://www.linkedin.com/in/chaowang15/">Chao Wang</a><sup>1*</sup>, </div>
+          <div class="author-block"><a href="http://jeff95.me/">Jianfeng Zhang</a><sup>1</sup>, </div>
+          <div class="author-block"><a href="https://hongyixu37.github.io/homepage/">Hongyi Xu</a><sup>1</sup>, </div>
+          <div class="author-block"><a href="https://guoxiansong.github.io/homepage/index.html">Guoxian Song</a><sup>1</sup>, </div>
+          <div class="author-block"><a href="https://ge.in.tum.de/about/you-xie/">You Xie</a><sup>1</sup>, </div>
+          <div class="author-block"><a href="http://linjieluo.com/">Linjie Luo</a><sup>1</sup>, </div>
+          <div class="author-block"><a href="https://www.yapengtian.com/">Yapeng Tian</a><sup>2</sup>, </div>
+          <div class="author-block"><a href="https://personal.utdallas.edu/~xguo/">Xiaohu Guo</a><sup>2</sup>, </div>
+          <div class="author-block"><a href="https://sites.google.com/site/jshfeng/home">Jiashi Feng</a><sup>1</sup>, </div>
+         
+        </div>
+
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">&nbsp&nbsp<sup>1</sup>Bytedance Inc.</span>
+          <span class="author-block">&nbsp&nbsp<sup>2</sup>The University of Texas at Dallas</span>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3, columns is-centered"></h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <video class="aaa" controls="controls" width="1015">
+            <source src="assets/app/pipeline.mp4" type="video/mp4"> 
+          </video>
+          <div class="is-size-6 publication-authors">
+          </div>
+      <!-- <h2 class="subtitle has-text-justified">
+        Our <b>DREAM-Talk</b> framework commences with an audio input, an initial state, and an emotion style as key inputs. The process begins with the EmoDiff model, which leverages a transformer-based architecture for sequence modeling to learn denoising 3D expressions over time. The initial state is set as the expression in the first frame, while the emotion style is determined by a randomly chosen expression clip, independent of the input audio. Following this, our lip refinement model takes the conditioned audio and emotional expressions to further refine the mouth area, ensuring that the intensity of emotions remains unaltered. Subsequently, these inputs are used to produce 3D rendered faces on a blendshape rig. The final step involves utilizing a finely-tuned video-to-video model to generate emotionally expressive talking videos.
+      </h2> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4, columns is-centered">Video Results</h2>
+    <hr>
+    <center>
+      <h2 class="title is-4"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b>Qualitative Comparisons with MakeitTalk, SadTalker and EAMM</h2>
+
+      <video class="aaa" controls="controls" width="1015">
+        <source src="assets/app/compare_with_other_methods_ALL.mp4" type="video/mp4"> 
+      </video>
+    </center>
+
+    <hr>
+    <center>
+      <h2 class="title is-4"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b>Qualitative Comparisons with EVP</h2>
+      <video class="aaa" controls="controls" width="1015">
+        <source src="assets/app/compare_with_EVP.mp4" type="video/mp4"> 
+      </video>
+
+    </center>
+    
+    <br>
+    <br>
+    <h2 class="title is-2, columns is-centered">Applications</h2>
+    <hr>
+    <center>
+      <h2 class="title is-4"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> More Characters</h2>
+      <p>
+        Results with Real Human Faces and AIGC-generated Faces. 
+      </p>
+      <video class="aaa" controls="controls" width="1015">
+        <source src="assets/app/compare_happy_angry_different_images.mp4" type="video/mp4"> 
+      </video>
+    </center>
+
+    <hr>
+    <center>
+      <h2 class="title is-4"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Multiple Emotions</h2>
+      <p>
+        Results with Various Emotions, Such as Anger, Happy, and Surprise. 
+      </p>
+      <video class="aaa" controls="controls" width="1015">
+        <source src="assets/app/compare_different_emotions_only.mp4" type="video/mp4"> 
+      </video>
+    </center>
+    
+    <hr>
+    <center>
+      <h2 class="title is-4"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> A Conversation Across Time and Space</h2>
+      <p>
+        Leonardo predominantly expresses anger, while Mona Lisa exhibits happiness.
+      </p>
+      <video class="aaa" controls="controls" width="600">
+        <source src="assets/app/dialogue_video_davinci_vs_monalisa_new.mp4" type="video/mp4"> 
+      </video>
+    </center>
+    
+
+    <hr>
+    <center>
+      <h2 class="title is-4"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Generation of Different Languages</h2>
+      <p>
+        Multiple Language Support for Emotional Talking Faces Generation, Including Chinese, Japanese, French, German, etc.
+      </p>
+      <video class="aaa" controls="controls" width="1015">
+        <source src="assets/app/languages_support.mp4" type="video/mp4"> 
+      </video>
+    </center>
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container content is-max-desktop">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{zhang2023dreamtalk,
+    author = {Zhang, Chenxu and Wang, Chao and Zhang, Jianfeng and Xu, Hongyi and Song, Guoxian and Xie, You and Luo, Linjie and Tian, Yapeng and Guo, Xiaohu and Feng, Jiashi},
+    title = {DREAM-Talk: Diffusion-based Realistic Emotional Audio-driven Method for Single Image Talking Face Generation},
+    booktile = {arxiv},
+    year = {2023}
+}</code></pre>
+  </div>
+</section>
+
+<script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+</html>
+
+<style>
+  .videoContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .videoContainer video.mainVideo {
+    width: 100%;
+    height: auto;
+  }
+
+  .videoContainer video.overlayVideo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%; /* Adjust this value to make video2 smaller or larger */
+  }
+</style>
